@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+
+<style>
+body
+{
+    height:400px;
+    background:radial-gradient(ellipse closest-side,#b89083,#7a5e48);
+}
+.login
+{
+    background-color:red;
+    color:white;
+    position:absolute;
+    left:240px;
+    top:280px;
+    font-size:25px;
+    padding:10px 20px;
+}
+div
+{
+    position:absolute;
+    left:180px;
+    top:150px;
+    border-style: solid;
+    border-color:rgba(0,2,2,0.5);	
+    border-width: 3px;
+    background-color:white;
+}
+h1
+{
+    background-color:#9dd813;
+    color:white;
+    font-size:25px;
+    position:absolute;
+    left:240px;
+    top:60px;
+    padding:10px 20px;
+    
+}
+p
+{
+     padding:10px;
+}
+</style>
+<body>
+<h1>
+Login
+</h1>
+<div>
+<p>
+
+<input type="text" value="Username" onfocus="if(value=='Username')  {value=''}" onblur="if (value=='') {value='Username'}" name="keyword"  size="30" style="color:#e5e1e1;"/>
+</p>
+<p>
+<input type="text" value="Password" onfocus="if(value=='Password')  {value=''}" onblur="if (value=='') {value='Password'}" name="keyword"  size="30" style="color:#e5e1e1;"/>
+</p>
+</div>
+<p class="login">
+login
+</p>
+</body>
+</html>
