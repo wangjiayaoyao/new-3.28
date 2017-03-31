@@ -2,62 +2,157 @@
 <html>
 
 <style>
-body
-{
-    height:400px;
+
+html{
+    height:100%;
     background:radial-gradient(ellipse closest-side,#b89083,#7a5e48);
 }
-.login
+form
 {
-    background-color:red;
-    color:white;
-    position:absolute;
-    left:240px;
-    top:280px;
-    font-size:25px;
-    padding:10px 20px;
+    padding:20px;
+
 }
 div
 {
-    position:absolute;
-    left:180px;
-    top:150px;
+  
     border-style: solid;
     border-color:rgba(0,2,2,0.5);	
     border-width: 3px;
     background-color:white;
+    padding:1px 19px;
+    border-radius:15px;
+    width:280px;
+} 
+div.after
+{
+    content="";
+    width:0px;
+    height:0px;
+    border-color:transparent transparent red;
+    border-width:10px;
+
 }
+
+
 h1
 {
     background-color:#9dd813;
     color:white;
-    font-size:25px;
-    position:absolute;
-    left:240px;
-    top:60px;
-    padding:10px 20px;
+    font-size:25px;  
+    padding:10px 5px;
+    border-color:rgba(255,255,255,0.5);
+    border-radius:5px;
+    border-width: 3px;
+    border-style:solid;
+    width:80px;
     
 }
-p
+img
 {
-     padding:10px;
+    width:20px;
+    height:20px;
+    border:0.1px solid gray;
+    background-color:#a6a09d;
 }
+.m
+{
+color:#e5e1e1;background-color:#a6a09d;
+text-align:center;
+height:35px;
+border:none;
+}
+.n
+{
+color:#e5e1e1;background-color:#a6a09d;
+text-align:center;
+height:35px;
+border:none;
+}
+
 </style>
 <body>
+<center>
 <h1>
 Login
 </h1>
 <div>
-<p>
 
-<input type="text" value="Username" onfocus="if(value=='Username')  {value=''}" onblur="if (value=='') {value='Username'}" name="keyword"  size="30" style="color:#e5e1e1;"/>
+<p>
+<img src="http://www.msqq.com/download/?t=png&id=61946&classid=2"  />
+<input type="text" id="name" value="Username" onfocus="if(value=='Username')  {value=''}" onblur="if (value=='') {value='Username'}" name="keyword"  size="30" 
+class="m"/>
 </p>
 <p>
-<input type="text" value="Password" onfocus="if(value=='Password')  {value=''}" onblur="if (value=='') {value='Password'}" name="keyword"  size="30" style="color:#e5e1e1;"/>
+<img src="http://www.msqq.com/download/?t=png&id=3493&classid=2"/>
+<input type="text" id="pass" value="Password" onfocus="if(value=='Password')  {value=''}" onblur="if (value=='') {value='Password'}" name="keyword"  size="30" class="n"/>
 </p>
 </div>
-<p class="login">
-login
-</p>
+
+<form> 
+<input type="submit" value="login" onclick="return checkuser()"
+style="font-size: 30px; color:white; 
+font-style: bold;
+border-color:rgba(3,2,2,0.5);
+padding:10px 123px;
+border-radius:10px;
+background-color:red"/> 
+</form>
+
+    <script type="text/javascript">
+window.alert = function(str) 
+{ 
+var shield = document.createElement("DIV"); 
+shield.id = "shield"; 
+shield.style.position = "absolute"; 
+shield.style.left = "0px"; 
+shield.style.top = "0px"; 
+shield.style.width = "100%"; 
+shield.style.height = document.body.scrollHeight+"px";  
+shield.style.background = "white"; 
+shield.style.textAlign = "center"; 
+shield.style.zIndex = "25"; 
+var alertFram = document.createElement("DIV"); 
+alertFram.id="alertFram"; 
+alertFram.style.position = "absolute"; 
+alertFram.style.left = "50%"; 
+alertFram.style.top = "50%"; 
+alertFram.style.marginLeft = "-225px"; 
+alertFram.style.marginTop = "-75px"; 
+alertFram.style.width = "450px"; 
+alertFram.style.height = "175px"; 
+alertFram.style.background = "white"; 
+alertFram.style.textAlign = "center"; 
+alertFram.style.lineHeight = "150px"; 
+alertFram.style.zIndex = "300"; 
+strHtml = "<ul style=\"list-style:none;margin:0px;padding:0px;width:100%\">\n"; 
+strHtml += " <li style=\"background:#DD828D;text-align:left;padding-left:20px;font-size:14px;font-weight:bold;height:25px;line-height:25px;border:1px solid #F9CADE;\">[Divediver提示框]</li>\n"; 
+strHtml += " <li style=\"background:#fff;text-align:center;font-size:12px;height:120px;line-height:120px;border-left:1px solid #F9CADE;border-right:1px solid #F9CADE;\">"+str+"</li>\n"; 
+strHtml += " <li style=\"background:#FDEEF4;text-align:center;font-weight:bold;height:25px;line-height:25px; border:1px solid #F9CADE;\"><input type=\"button\" value=\"确 定\" onclick=\"doOk()\" /></li>\n"; 
+strHtml += "</ul>\n"; 
+alertFram.innerHTML = strHtml; 
+document.body.appendChild(alertFram); 
+document.body.appendChild(shield); 
+var ad = setInterval("doAlpha()",5); 
+this.doOk = function(){ 
+alertFram.style.display = "none"; 
+shield.style.display = "none"; 
+} 
+alertFram.focus(); 
+document.body.onselectstart = function(){return false;}; 
+}
+      function checkuser() {
+         if(('name' == "qwe") && ('pass') == "123")
+ {
+           alert("登陆成功");
+           return true;
+         }else {
+            alert("用户名或密码输入错误");
+            return false;
+         }
+      }
+     </script>
+
+
+</center>
 </body>
 </html>
