@@ -1,6 +1,9 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
-
+<head>
+<meta charset="utf-8">
+<title>111111</title>
+</head>
 <style>
  
 html{
@@ -11,6 +14,7 @@ form
 {
     padding:20px;
 
+
 }
 div {
     width:300px;
@@ -19,9 +23,11 @@ div {
     border-radius:15px;
     position:relative;
     padding:30px;
+	border:5px solid rgba(247,234,234,0.5);
 }
 div:after {
     content:"";
+    
     position:absolute;
     border-style:solid;
     border-color: transparent transparent white transparent;
@@ -31,15 +37,15 @@ div:after {
 }
 h1
 {
-    background-color:#9dd813;
+    background: radial-gradient(#58ef4d,#40ae38);
     color:white;
     font-size:25px;  
     padding:10px 5px;
-    border-color:rgba(255,255,255,0.5);
+    border-color:rgba(255,255,255,0.2);
     border-radius:5px;
-    border-width: 3px;
+    border-width: 2px;
     border-style:solid;
-    width:80px;
+    width:140px;
     
 }
 input ,img 
@@ -92,10 +98,11 @@ class="n"/>
 <input type="submit" value="login" onclick="return checkuser()"
 style="font-size: 30px; color:white; 
 font-style: bold;
-border-color:rgba(3,2,2,0.5);
+border-color:rgba(225,225,225,0.1);
 padding:10px 100px;
 border-radius:10px;
-background-color:red"/> 
+background: radial-gradient(#f0ada8,#e55760);
+"/> 
 </form>
 </div>
 
@@ -155,5 +162,6 @@ document.body.onselectstart = function(){return false;};
 
 
 </center>
+
 </body>
 </html>
